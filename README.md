@@ -1,6 +1,5 @@
 # Raspberry Pi Zero Bare Metal C Example
-This project demonstrates how to blink LED using bare metal C, no SD card with preinstaled OS
-required. Kernel image should be also compatible with other BCM2835 boards such as Raspberry Pi A, A+, B, B+, Zero W.
+This project demonstrates how to blink LED using bare metal C. Kernel image should be also compatible with other BCM2835 boards such as Raspberry Pi A, A+, B, B+, Zero W.
 
 ## Prerequisites
 
@@ -13,7 +12,8 @@ Optionally you would also need `fdisk` for formating the SD card manually.
 
 ## Format the SD card using Imager
 
-Friendly way of formating SD card is using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) with Raspberry Pi OS image and then just deleting all the files from the SD card. Afterwards, when you run `fdisk -l /dev/mmcblk0` you should see similar output to this
+Friendly way of formating SD card to uses [Raspberry Pi Imager](https://www.raspberrypi.com/software/) with Raspberry Pi OS image and then just delete all the files from the SD card. Afterwards, when you run `fdisk -l /dev/mmcblk0` you should see similar output to this
+
 ```
 fdisk -l /dev/mmcblk0
 	Disk /dev/mmcblk0: 29,3 GiB, 31460950016 bytes, 61447168 sectors
