@@ -1,3 +1,5 @@
+DIR	?=	/media/mike/bootfs
+
 all: kernel.img
 
 boot.o: boot.s
@@ -10,9 +12,9 @@ kernel.img: boot.o main.o
 	arm-none-eabi-gcc -Wall -Wextra -T linker.ld -mcpu=arm1176jzf-s -ffreestanding -fpic -O2 -nostdlib -lgcc boot.o main.o
 	arm-none-eabi-objcopy -O binary kernel.elf kernel.img
 
-copy: kernel.img
-	cp kernel.img /media/mike/bootfs
-	cp firmware/* /media/mike/bootfs
+install: kernel.img
+	cp kernel.img $(DIR)
+	cp firmware/* $(DIR)
 	sudo umount /dev/mmcblk0p1
 
 clean:
