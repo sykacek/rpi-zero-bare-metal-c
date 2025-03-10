@@ -12,10 +12,10 @@ kernel.img: boot.o main.o
 
 copy: kernel.img
 	cp kernel.img /media/mike/bootfs
+	cp firmware/* /media/mike/bootfs
 	sudo umount /dev/mmcblk0p1
-	sudo umount /dev/mmcblk0p2
 
 clean:
-	/bin/rm kernel.elf *.o *.img
+	@rm *.elf *.o *.img
 
-.PHONY: copy clean copystub kernelstub
+.PHONY: copy clean

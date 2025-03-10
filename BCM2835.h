@@ -18,8 +18,4 @@
 #define REG_GPCLR0			(GPIO_BASE + 0x28)
 #define REG_GPCLR1			(GPIO_BASE + 0x2c)
 
-#define CPU_FREQUENCY			(1000000000)
-
-#include "inttypes.h"
-
 #endif
